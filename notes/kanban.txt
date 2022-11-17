@@ -1,0 +1,132 @@
+##########################################################
+# Release 1.0.0
+##########################################################
+
+* create node and edge
+
+* query node and edge
+
+* expandRight simple single level
+
+* create custom node and edge classes (children of ootb ones with tighter graph support)
+
+* expandLeft simple single level
+
+* expandRight complex (one relClause) single level
+
+* expandLeft complex (one otherSideClause) single level
+
+* expandRight complex (multiple relClause, multiple otherSideClause) single level
+
+* Switch edge constructor to be object based (not string based)
+
+* combine KnowledgeGraph.upsert[...]() to KnowledgeGraph.upsert()
+
+* switch node constructor to specify collection
+
+* expandRight simple single level with otherSide objects in different collections
+
+* list node collections
+
+* getEdgeTypesForLeftType
+
+* getEdgeTypesForRightType
+
+* getLeftTypesForEdgeType
+
+* getRightTypesforEdgeType
+
+* replace "Collection" with "Type" in kgraph language.
+
+* JavaDoc the code
+
+* KnowledgeGraph.getNodeTypes() shall not return schema node types.
+  (nodeTypesCollectionName, edgeTypesCollectionName)
+  
+* Change KnowledgeGraph.getTotalCount() should not return schema node types counts in its total.
+  (nodeTypesCollectionName, edgeTypesCollectionName)
+  
+* support DB access via config file(s) - ArangoDB system user, password, host, and port.
+
+* create performance tests and associated test suite.
+
+* 100% code coverage (this allows regressions in coverage to be easily found.)
+
+* create version 1.0.0 of KGraph (set POM.xml and add tag)
+
+##########################################################
+# Release 1.0.1
+##########################################################
+
+* include source in build results so can be accessed by dependent projects
+
+* include javadoc in build results so can be accessed by dependent projects
+
+* query non-existant type, get zero results
+
+* create version 1.0.1 of KGraph (set POM.xml and add tag)
+
+##########################################################
+# Release 1.1.1
+##########################################################
+
+* edge creation with no end nodes.
+
+* create version 1.1.1 of KGraph (set POM.xml and add tag)
+
+##########################################################
+# Release 2.0.0
+##########################################################
+
+* fix exception cases.
+
+##########################################################
+# Release 3.4.0
+##########################################################
+
+* add toJson() support
+
+##########################################################
+# Release 3.5.0
+##########################################################
+
+* add toDot() support
+
+
+##########################################################
+# Release 4.0.0
+##########################################################
+
+* support 'load from json' support
+
+* close security defects (Snyk is cool)
+
+* improve performance (result was 100X)
+
+##########################################################
+# WIP
+##########################################################
+
+* publish release 4.0.0.
+
+* read about cluster support
+  - https://www.arangodb.com/docs/stable/architecture-deployment-modes-cluster-architecture.html
+  - https://www.arangodb.com/docs/stable/deployment-cluster-using-the-starter.html
+  - https://www.arangodb.com/docs/stable/deployment-docker.html
+
+##########################################################
+# backlog
+##########################################################
+
+
+* add support in kGraph to work with a pool of ArangoDB end-points
+
+* Disallow client code from making/using Type with reserved names
+    - KnowledgeGraph.nodeTypesCollectionName
+    - KnowledgeGraph.edgeTypesCollectionName
+	
+* set based performance improvements
+	- load nodes
+	- load edges
+
+* break apart KnowledgeGraph - no God Class
